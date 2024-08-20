@@ -1,0 +1,67 @@
+
+:root { /*Sitio para la declaración de variables, se llaman con var()*/
+    --main-color: lightblue;
+    --header-hight: 80px;
+}
+
+body {
+    margin: 0;  /*Quita borde blanco de la página que viene por defecto*/
+}
+
+header {    /*Nesting, modificar los atributos de etiquetas dentro de otras sin repetir referencias*/
+    height: var(--header-hight);
+
+    ul {
+        margin: 0px;
+        list-style: none;   /*Quita los bullets points*/
+
+        li {
+            display: inline-block;  /*Convierte de bloque a linea*/
+            width: 100px;   
+
+            a {
+                line-height: var(--header-hight);
+                display: block; 
+                text-align: center;
+
+                &:hover {
+                    background-color: var(--main-color);
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    width: 100%;    /*Acá no se usa el view width porque abarca tambiénlo escondido detrás del scroll*/
+    height: calc(100vh - var(--header-hight));  /*100% del view hight*/ /*Calc hace el cálculo por ti, el -80 es para quitar el header*/
+    background-color: var(--main-color);
+}
+
+.gallery > div {
+    height: 200px;
+    background-color: lightgreen;
+    width: 25%; /*4 bloques por renglón*/
+    float: left;    /*Evita que haya salto de linea entre bloques*/
+    border: solid 5px forestgreen;
+    box-sizing: border-box; /*Incluye border, padding y content en el 25%, no solo el content, agregar margen no afecta*/
+}
+
+.gallery::after {   /*Limpia el float para evitar que se encimen elementos entre sí */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 800px){   /*Cambio para pantallas más chicas, 2 por linea*/
+    .gallery > div {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px){   /*Cambio para pantallas más chicas, 1 por linea*/
+    .gallery > div {
+        width: 100%;
+    }
+}
+
