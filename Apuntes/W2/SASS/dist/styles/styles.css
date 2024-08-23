@@ -1,0 +1,37 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: green;
+}
+
+.btn {
+  border: solid 1px #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.btn-primary {
+  border: solid 1px #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: darkblue;
+}
+
+/*
+.btn {
+    border: solid 1px #333;
+    border-radius: 5px;
+    padding:  5px 10px;
+    background-color: lightgreen;
+}
+
+.btn-primary{
+    @extend .btn;
+    background-color: lightcoral;
+
+}
+*/
+
+/*# sourceMappingURL=styles.css.map */
