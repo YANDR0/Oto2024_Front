@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+.Titulos, .Inicio {
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: midnightblue;
+  color: lightslategray;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.Inicio {
+  color: whitesmoke;
+  border: solid 5px midnightblue;
+}
+
+/*# sourceMappingURL=styles.css.map */

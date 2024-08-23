@@ -1,0 +1,18 @@
+
+@import "vars";
+
+body {
+    margin: 0; 
+}
+
+.Titulos{
+    @include principal-text;
+
+}
+
+.Inicio{
+    @extend .Titulos;
+    color: whitesmoke;
+    border: solid 5px $formal-c;
+}
+
