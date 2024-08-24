@@ -1,9 +1,13 @@
 
 @import "vars";
+$weird-font: true;
 
 body {
     margin: 0; 
-    background-color: gray
+    background-color: gray;
+    @if $weird-font{
+        font-family: Copperplate, Papyrus, fantasy;
+    }
 }
 
 .Titulos{
@@ -65,20 +69,20 @@ body {
         }
     }
 }
+    
 
-
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1100px){
     .Portada > div, .Pie > div{
-        width: 100%;
+        width: mul($w-big, 2);
     }
 
     .Info > div{
-        width: 50%;
+        width: mul($w-small, 2);
     }
 }
 
 @media screen and (max-width: 600px){
     .Info > div{
-        width: 100%;
+        width: mul($w-small, 4);
     }
 }

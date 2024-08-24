@@ -4,7 +4,6 @@ $formal-c: midnightblue;
 $w-big: 50%;
 $w-small: 25%;
 
-
 @mixin principal-text{
     text-align: center;
     font-family: $fonts;
@@ -29,4 +28,6 @@ $w-small: 25%;
     clear: both;
 }
 
-
+@function mul($num1, $num2){
+    @return $num1 * $num2
+}
