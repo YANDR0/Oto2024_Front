@@ -1,6 +1,6 @@
-@charset "UTF-8";
 body {
   margin: 0;
+  background-color: gray;
 }
 
 .Titulos, .Inicio {
@@ -23,7 +23,11 @@ body {
   width: 50%;
 }
 .Portada > div img {
-  width: 500px;
+  width: 100%;
+  height: auto;
+}
+.Portada > div h2, .Portada > div p {
+  margin: 20px;
 }
 
 .Portada::after {
@@ -47,21 +51,34 @@ body {
 }
 
 .Pie {
-  margin: 20px;
+  margin: 0;
+  padding: 0;
 }
 .Pie div {
   float: left;
+  background-color: aqua;
+  text-align: center;
   width: 50%;
 }
+.Pie div ul {
+  list-style: none;
+}
+.Pie div ul li {
+  display: inline-block;
+  margin: 10px;
+}
 
-@media screen and (max-width: 800px) { /*Cambio para pantallas más chicas, 2 por linea*/
-  .gallery > div {
+@media screen and (max-width: 1200px) {
+  .Portada > div, .Pie > div {
+    width: 100%;
+  }
+  .Info > div {
     width: 50%;
   }
 }
-@media screen and (max-width: 800px) { /*Cambio para pantallas más chicas, 2 por linea*/
-  .gallery > div {
-    width: 50%;
+@media screen and (max-width: 600px) {
+  .Info > div {
+    width: 100%;
   }
 }
 

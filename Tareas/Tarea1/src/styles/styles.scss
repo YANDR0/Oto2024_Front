@@ -3,6 +3,7 @@
 
 body {
     margin: 0; 
+    background-color: gray
 }
 
 .Titulos{
@@ -15,23 +16,28 @@ body {
     border: solid 5px $formal-c;
 }
 
-.Portada > div{
+.Portada > div{     //Imagen, datos generales y pasatiempos
     @include float;
-    width: 50%;
+    width: $w-big;
     img{
-        width:500px;
+        width: 100%;
+        height: auto;
     }
+    h2, p{
+        @include n-margin
+    }
+
 }
 
 .Portada::after {
     @include clean
 }
 
-.Info{
+.Info{              //Educación, tecnologias y etc.
     @include n-margin;
     div{
         @include float;
-        width: 25%;
+        width: $w-small;
     }
 }
 
@@ -39,26 +45,40 @@ body {
     @include clean
 }
 
-.Pie{
-    @include n-margin;
+.Pie{              // Vinculos
+    
+    margin:0;
+    padding:0;
+    
     div{
         @include float;
-        width: 50%;
+        background-color: aqua;
+        text-align: center;
+        width: $w-big;
+
+        ul{
+            list-style: none;
+            li{
+                display: inline-block;
+                margin: 10px;
+            }
+        }
     }
 }
 
 
+@media screen and (max-width: 1200px){
+    .Portada > div, .Pie > div{
+        width: 100%;
+    }
 
-
-@media screen and (max-width: 800px){   /*Cambio para pantallas más chicas, 2 por linea*/
-    .gallery > div {
+    .Info > div{
         width: 50%;
     }
 }
 
-@media screen and (max-width: 800px){   /*Cambio para pantallas más chicas, 2 por linea*/
-    .gallery > div {
-        width: 50%;
+@media screen and (max-width: 600px){
+    .Info > div{
+        width: 100%;
     }
 }
-
