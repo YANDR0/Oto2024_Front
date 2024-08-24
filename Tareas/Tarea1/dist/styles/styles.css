@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
 }
@@ -15,6 +16,53 @@ body {
 .Inicio {
   color: whitesmoke;
   border: solid 5px midnightblue;
+}
+
+.Portada > div {
+  float: left;
+  width: 50%;
+}
+.Portada > div img {
+  width: 500px;
+}
+
+.Portada::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Info {
+  margin: 20px;
+}
+.Info div {
+  float: left;
+  width: 25%;
+}
+
+.Info::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Pie {
+  margin: 20px;
+}
+.Pie div {
+  float: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 800px) { /*Cambio para pantallas más chicas, 2 por linea*/
+  .gallery > div {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 800px) { /*Cambio para pantallas más chicas, 2 por linea*/
+  .gallery > div {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

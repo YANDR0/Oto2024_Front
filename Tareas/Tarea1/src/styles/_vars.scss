@@ -11,3 +11,17 @@ $formal-c: midnightblue;
     margin:0;
     padding:0;
 }
+
+@mixin float{
+    float: left;
+}
+
+@mixin n-margin{
+    margin: 20px;
+}
+
+@mixin clean{
+    content: "";
+    display: table;
+    clear: both;
+}

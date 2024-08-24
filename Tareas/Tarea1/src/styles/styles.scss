@@ -7,12 +7,58 @@ body {
 
 .Titulos{
     @include principal-text;
-
 }
 
 .Inicio{
     @extend .Titulos;
     color: whitesmoke;
     border: solid 5px $formal-c;
+}
+
+.Portada > div{
+    @include float;
+    width: 50%;
+    img{
+        width:500px;
+    }
+}
+
+.Portada::after {
+    @include clean
+}
+
+.Info{
+    @include n-margin;
+    div{
+        @include float;
+        width: 25%;
+    }
+}
+
+.Info::after {
+    @include clean
+}
+
+.Pie{
+    @include n-margin;
+    div{
+        @include float;
+        width: 50%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 800px){   /*Cambio para pantallas más chicas, 2 por linea*/
+    .gallery > div {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px){   /*Cambio para pantallas más chicas, 2 por linea*/
+    .gallery > div {
+        width: 50%;
+    }
 }
 
